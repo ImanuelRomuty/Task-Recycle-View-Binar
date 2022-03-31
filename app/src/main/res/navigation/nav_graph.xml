@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/recycleFragment">
+
+    <fragment
+        android:id="@+id/recycleFragment"
+        android:name="com.example.taskchapter4detail.RecycleFragment"
+        android:label="fragment_recycle"
+        tools:layout="@layout/fragment_recycle" >
+        <action
+            android:id="@+id/action_recycleFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.taskchapter4detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="patch"
+            app:argType="com.example.taskchapter4detail.User" />
+    </fragment>
+</navigation>
